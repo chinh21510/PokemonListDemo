@@ -38,6 +38,47 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
         </scene>
+        <!--Info Pokemon View Controller-->
+        <scene sceneID="gYo-q4-JnI">
+            <objects>
+                <viewController storyboardIdentifier="InfoPokemonViewController" id="A4j-Rr-QzH" customClass="InfoPokemonViewController" customModule="PokemonList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b2K-ua-xS3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YrV-Bv-pJm">
+                                <rect key="frame" x="80" y="428" width="254" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kUj-IH-ASW">
+                                <rect key="frame" x="80" y="124" width="254" height="254"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kUj-IH-ASW" secondAttribute="height" multiplier="1:1" id="lBg-v1-3QT"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YrV-Bv-pJm" firstAttribute="leading" secondItem="NjP-6p-qL4" secondAttribute="leading" constant="80" id="H0S-AP-EYI"/>
+                            <constraint firstItem="NjP-6p-qL4" firstAttribute="trailing" secondItem="kUj-IH-ASW" secondAttribute="trailing" constant="80" id="Ini-ay-Hvy"/>
+                            <constraint firstItem="YrV-Bv-pJm" firstAttribute="top" secondItem="kUj-IH-ASW" secondAttribute="bottom" constant="50" id="J7d-Gq-Y94"/>
+                            <constraint firstItem="kUj-IH-ASW" firstAttribute="top" secondItem="NjP-6p-qL4" secondAttribute="top" constant="80" id="M66-hf-CSi"/>
+                            <constraint firstItem="kUj-IH-ASW" firstAttribute="leading" secondItem="NjP-6p-qL4" secondAttribute="leading" constant="80" id="Phq-eh-MqW"/>
+                            <constraint firstItem="NjP-6p-qL4" firstAttribute="trailing" secondItem="YrV-Bv-pJm" secondAttribute="trailing" constant="80" id="ifn-x5-zlh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NjP-6p-qL4"/>
+                    </view>
+                    <connections>
+                        <outlet property="pokemonImageView" destination="kUj-IH-ASW" id="38G-GX-CUB"/>
+                        <outlet property="pokemonNameLabel" destination="YrV-Bv-pJm" id="eAA-v0-wy9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y2v-I6-HNt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1795.6521739130437" y="132.58928571428572"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="gbp-yr-3vh">
             <objects>

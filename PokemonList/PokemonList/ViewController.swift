@@ -13,18 +13,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     var pokemons = [Pokemon]()
     var pokeImage: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         requestPokemon()
         setupUI()
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let pokemon = pokemons[indexPath.row]
-        let infoPokemonView = storyboard?.instantiateViewController(withIdentifier: "InfoPokemon") as! InfoPokemon
-        infoPokemonView.namePokemon = pokemon.name
-        navigationController?.pushViewController(infoPokemonView, animated: true)
+        let infoPokemonView: InfoPokemonViewController = storyboard?.instantiateViewController(withIdentifier: "InfoPokemonViewController") as! InfoPokemonViewController
+        infoPokemonView.pokemonName = pokemon.name
+        infoPokemonView.pokemonImageUrl = pokemon.pokemonImage
+        
+        self.navigationController?.pushViewController(infoPokemonView, animated: true)
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pokemons.count
     }
